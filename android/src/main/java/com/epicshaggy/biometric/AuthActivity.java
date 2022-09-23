@@ -67,7 +67,7 @@ public class AuthActivity extends AppCompatActivity {
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
 
-                finishActivity(errString.toString(), errorCode);
+                finishActivity("failed", errorCode);
             }
 
             @Override
@@ -100,7 +100,7 @@ public class AuthActivity extends AppCompatActivity {
     void finishActivity(String result, int errorCode) {
         Intent intent = new Intent();
         if(errorCode != 0){
-            intent.putExtra("result", "error");
+            intent.putExtra("result", "failed");
             intent.putExtra("errorDetails",result);
             intent.putExtra("errorCode",String.valueOf(errorCode));
         }else{

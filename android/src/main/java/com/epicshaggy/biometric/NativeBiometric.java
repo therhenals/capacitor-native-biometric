@@ -217,7 +217,7 @@ public class NativeBiometric extends Plugin {
                         call.resolve();
                         break;
                     case "failed":
-                        call.reject(data.getStringExtra("errorDetails"), data.getStringExtra("errorCode"));
+                        call.reject(data.getStringExtra("errorCode"));
                         break;
                     default:
                         call.reject("Verification error: " + data.getStringExtra("result"));
