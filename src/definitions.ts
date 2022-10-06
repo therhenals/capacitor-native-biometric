@@ -6,6 +6,7 @@ export enum BiometryType {
   FACE_AUTHENTICATION,
   IRIS_AUTHENTICATION,
   MULTIPLE,
+  PIN_PATTERN_PASSWORD,
 }
 
 export interface Credentials {
@@ -57,6 +58,8 @@ export interface DeleteCredentialOptions {
 
 export interface NativeBiometricPlugin {
   isAvailable(options?: IsAvailableOptions): Promise<AvailableResult>;
+
+  isAvailableDeviceSecure(): Promise<AvailableResult>;
 
   verifyIdentity(options?: BiometricOptions): Promise<any>;
 

@@ -59,6 +59,7 @@ public class NativeBiometric extends Plugin {
     private static final int FACE_AUTHENTICATION = 4;
     private static final int IRIS_AUTHENTICATION = 5;
     private static final int MULTIPLE = 6;
+    private static final int PIN_PATTERN_PASSWORD = 7;
 
 
     private KeyStore keyStore;
@@ -121,6 +122,25 @@ public class NativeBiometric extends Plugin {
         }
 
         ret.put("biometryType", getAvailableFeature());
+        call.resolve(ret);
+    }
+
+    @PluginMethod()
+    public void isAvailableDeviceSecure(PluginCall call) {
+        JSObject ret = new JSObject();
+
+        try {
+            KeyguardManager keyguardManager = (KeyguardManager) getContext().getSystemService(Context.KEYGUARD_SERVICE);
+            if (keyguardManager.isDeviceSecure()) {
+                ret.put("isAvailable", true);
+                ret.put("biometryType", PIN_PATTERN_PASSWORD);
+            } else {
+                ret.put("isAvailable", false);
+            }
+        } catch (Exception e) {
+            ret.put("isAvailable", false);
+        }
+
         call.resolve(ret);
     }
 
