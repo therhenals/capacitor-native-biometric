@@ -1,0 +1,23 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.epicshaggy.biometric.capacitornativebiometric" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->/Users/bitsamericas/Desktop/pruebasionic/capacitor-native-biometric/android/src/main/AndroidManifest.xml
+7        android:targetSdkVersion="31" />
+7-->/Users/bitsamericas/Desktop/pruebasionic/capacitor-native-biometric/android/src/main/AndroidManifest.xml
+8
+9    <application>
+9-->/Users/bitsamericas/Desktop/pruebasionic/capacitor-native-biometric/android/src/main/AndroidManifest.xml:5:5-10:19
+10        <activity
+10-->/Users/bitsamericas/Desktop/pruebasionic/capacitor-native-biometric/android/src/main/AndroidManifest.xml:6:9-9:68
+11            android:name="com.epicshaggy.biometric.AuthActivity"
+11-->/Users/bitsamericas/Desktop/pruebasionic/capacitor-native-biometric/android/src/main/AndroidManifest.xml:7:13-65
+12            android:label="@string/title_activity_auth_activity"
+12-->/Users/bitsamericas/Desktop/pruebasionic/capacitor-native-biometric/android/src/main/AndroidManifest.xml:8:13-65
+13            android:theme="@style/AppTheme.Transparent" />
+13-->/Users/bitsamericas/Desktop/pruebasionic/capacitor-native-biometric/android/src/main/AndroidManifest.xml:9:13-56
+14    </application>
+15
+16</manifest>

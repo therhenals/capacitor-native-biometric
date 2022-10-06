@@ -19,6 +19,9 @@ export class NativeBiometricWeb
   isAvailable(): Promise<AvailableResult> {
     throw new Error("Method not implemented.");
   }
+  isAvailableDeviceSecure(): Promise<AvailableResult> {
+    throw new Error("Method not implemented.");
+  }
 
   verifyIdentity(_options?: BiometricOptions): Promise<any> {
     throw new Error("Method not implemented.");

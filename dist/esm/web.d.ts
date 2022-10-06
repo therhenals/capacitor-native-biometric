@@ -3,6 +3,7 @@ import { NativeBiometricPlugin, AvailableResult, BiometricOptions, GetCredential
 export declare class NativeBiometricWeb extends WebPlugin implements NativeBiometricPlugin {
     constructor();
     isAvailable(): Promise<AvailableResult>;
+    isAvailableDeviceSecure(): Promise<AvailableResult>;
     verifyIdentity(_options?: BiometricOptions): Promise<any>;
     getCredentials(_options: GetCredentialOptions): Promise<Credentials>;
     setCredentials(_options: SetCredentialOptions): Promise<any>;

@@ -7,5 +7,6 @@ export var BiometryType;
     BiometryType[BiometryType["FACE_AUTHENTICATION"] = 4] = "FACE_AUTHENTICATION";
     BiometryType[BiometryType["IRIS_AUTHENTICATION"] = 5] = "IRIS_AUTHENTICATION";
     BiometryType[BiometryType["MULTIPLE"] = 6] = "MULTIPLE";
+    BiometryType[BiometryType["PIN_PATTERN_PASSWORD"] = 7] = "PIN_PATTERN_PASSWORD";
 })(BiometryType || (BiometryType = {}));
 //# sourceMappingURL=definitions.js.map
